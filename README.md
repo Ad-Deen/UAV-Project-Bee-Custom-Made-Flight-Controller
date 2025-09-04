@@ -14,7 +14,8 @@ A fully customizable, low-cost UAV flight controller firmware built on **ESP32-S
 ---
 
 <p align="center">
-  <img src="bee1_compressed.gif" alt="Swarm Drone Demo" width="600"/>
+  <img src="bee1_compressed.gif" alt="Swarm Drone Demo" width="300"/>
+  <img src="bee1_compressed.gif" alt="Swarm Drone Demo" width="300"/>
 </p>
 
 ---
