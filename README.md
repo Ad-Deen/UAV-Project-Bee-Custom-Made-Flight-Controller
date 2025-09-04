@@ -12,7 +12,7 @@ A fully customizable, low-cost UAV flight controller firmware built on **ESP32-S
 - **Failsafe:** Automatic motor shutdown if communication is lost for >500ms.
 - **Open-source:** Firmware design available for other researchers and hobbyists.
 ---
-
+## Telemetry control and Video Feedback Demo
 <p align="center">
   <img src="bee1_compressed.gif" alt="Swarm Drone Demo" width="300"/>
   <img src="bee_vis_feedback.gif" alt="Swarm Drone vid" width="300"/>
