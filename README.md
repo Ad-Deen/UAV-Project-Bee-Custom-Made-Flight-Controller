@@ -13,6 +13,11 @@ A fully customizable, low-cost UAV flight controller firmware built on **ESP32-S
 - **Open-source:** Firmware design available for other researchers and hobbyists.
 ---
 
+<p align="center">
+  <img src="bee1_compressed.gif" alt="Swarm Drone Demo" width="600"/>
+</p>
+
+---
 ## System Architecture
 
 ```mermaid
