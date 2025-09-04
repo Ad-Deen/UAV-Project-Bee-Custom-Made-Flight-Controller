@@ -1,6 +1,6 @@
 # ESP32-S3 Custom Flight Controller for Autonomous UAV
 
-A fully customizable, low-cost UAV flight controller firmware built on **ESP32-S3** for control, telemetry, and visual frame capture. The system uses **Wi-Fi** for all communications, eliminating the need for additional telemetry or video transmission hardware. The firmware is open-sourced to support UAV research on a tight budget.
+A fully customizable, low-cost UAV flight controller firmware built on **ESP32-S3** for control, telemetry, and **ESP32-S3-CAM with OVA5640** for visual frame capture. The system uses **Wi-Fi** for all communications, eliminating the need for additional telemetry or video transmission hardware. The firmware is open-sourced to support UAV research on a tight budget.
 
 ## Features
 
