@@ -1,5 +1,3 @@
-# Untitled
-
 # ESP32-S3 Custom Flight Controller for Autonomous UAV
 
 A fully customizable, low-cost UAV flight controller firmware built on **ESP32-S3** for control, telemetry, and visual frame capture. The system uses **Wi-Fi** for all communications, eliminating the need for additional telemetry or video transmission hardware. The firmware is open-sourced to support UAV research on a tight budget.
@@ -13,18 +11,54 @@ A fully customizable, low-cost UAV flight controller firmware built on **ESP32-S
 - **PID-based stabilization:** Roll, pitch, yaw, and altitude control with configurable gains.
 - **Failsafe:** Automatic motor shutdown if communication is lost for >500ms.
 - **Open-source:** Firmware design available for other researchers and hobbyists.
+---
 
 ## System Architecture
 
-```
-[ESP32-S3 Flight Controller] <--Wi-Fi--> [PC for Processing & Visual Odometry]
-       |                       \
-       |                        -> [ESP32-S3-CAM] captures stereo frames
-       |
-   Sensors & ESCs
-(IMU, GPS, Motors)
+```mermaid
+flowchart TD
+    FC[ESP32-S3 Flight Controller]
+    PC[PC for Processing & Visual Odometry]
+    CAM[ESP32-S3-CAM]
+    SENSORS[Sensors & ESCs<br>IMU, GPS, Motors]
+
+    FC -->|Wi-Fi| PC
+    PC -->|Receives Stereo Frames| CAM
+    FC --> SENSORS
 
 ```
+---
+## System Workflow
+
+The following diagram illustrates the UAV system workflow, from sensor capture to autonomous navigation:
+
+```mermaid
+flowchart TD
+    A[ESP32-S3 Flight Controller]
+    B[PID Stabilization Loop]
+    C[Motor Output ESCs]
+    D[Flight State Estimation]
+    E[ESP32 S3 CAM]
+    F[Wi-Fi UDP Transmission]
+    G[PC Visual Odometry & Depth Processing]
+    H[Feature Extraction 2D to 3D Points]
+    I[Relative Odometry Computation]
+    J[3D Odometry via PnP]
+    K[Short-term Navigation Commands]
+
+    A --> B
+    B --> C
+    A --> D
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+    J --> K
+    K --> A
+```
+
+---
 
 **Control & Video Flow:**
 
